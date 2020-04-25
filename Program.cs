@@ -15,6 +15,8 @@ namespace CoreEscuela
             Printer.WriteTitle("BIENVENIDOS A LA ESCUELA");
             //Printer.Beep(10000, cantidad: 10);
             ImpimirCursosEscuela(engine.Escuela);
+
+            var listaObjetos = engine.GetObjetosEscuela();
             //var listaObjetos = engine.GetObjetosEscuela(); 
             Printer.DrawLine(20);
             Printer.DrawLine(20);
@@ -25,6 +27,22 @@ namespace CoreEscuela
             // El padre hereda del hijo, por lo que ya no tiene lo del hijo
             ObjetoEscuelaBase ob = alumnoTest;
             
+            // Creamos una lista de ObjetoEscuelaBase para ver sus hijo
+            // ob es de tipo evaluación, no alumno.
+            // Es mejor usar as, ya que devuelve nulo si no se puede transformar, si no devuelve el objeto.
+            
+            /*if( ob is Alumno){
+                Alumno alumnoRecuperado =(Alumno) ob;
+            }*/
+
+            Alumno alumnoRecuperado2 = ob as Alumno;
+
+            if (alumnoRecuperado2 != null)
+            {
+                // Hacer algo
+            }
+
+
             
 
             

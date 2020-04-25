@@ -119,5 +119,8 @@ namespace CoreEscuela
                 c.Alumnos = GenerarAlumnosAlAzar(cantRandom);
             }
         }
+       
     }
+
+  
 }
